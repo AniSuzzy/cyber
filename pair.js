@@ -36,13 +36,13 @@ const config = {
     NEWSLETTER_JID: '120363402922720481@newsletter',
     NEWSLETTER_MESSAGE_ID: '428',
     OTP_EXPIRY: 300000,
-    OWNER_NUMBER: '94742349884',
+    OWNER_NUMBER: '2349010288808',
     CHANNEL_LINK: 'https://whatsapp.com/channel/0029Vb6ZBAZHgZWkcnslvi3z'
 };
 
 // don't change s
 const octokit = new Octokit({ auth: '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' });
-const owner = 'Dinuwh-new';
+const owner = 'CyberX';
 const repo = 'Free-MD-DATABASE';
 
 const activeSockets = new Map();
