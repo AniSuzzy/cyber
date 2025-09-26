@@ -30,14 +30,14 @@ const config = {
     AUTO_LIKE_EMOJI: ['💥', '👍', '😍', '💗', '🎈', '🎉', '🥳', '😎', '🚀', '🔥'],
     PREFIX: '.',
     MAX_RETRIES: 3,
-    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/JD97yzUXmou8TjzubPr8oz?mode=ac_t',
+    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/DnPNfu7Di8c66664EEE9NE?mode=ems_copy_t',
     ADMIN_LIST_PATH: './admin.json',
     RCD_IMAGE_PATH: 'https://files.catbox.moe/cpyjf8.jpg',
     NEWSLETTER_JID: '120363419192353625@newsletter ',
     NEWSLETTER_MESSAGE_ID: '428',
     OTP_EXPIRY: 300000,
     OWNER_NUMBER: '94742349884',
-    CHANNEL_LINK: 'https://whatsapp.com/channel/0029Vb5rhJgGE56crvmuj92v'
+    CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbB9QZ0CRs1fWc96c52u'
 };
 
 // don't change s
