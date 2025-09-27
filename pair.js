@@ -30,19 +30,19 @@ const config = {
     AUTO_LIKE_EMOJI: ['💥', '👍', '😍', '💗', '🎈', '🎉', '🥳', '😎', '🚀', '🔥'],
     PREFIX: '.',
     MAX_RETRIES: 3,
-    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/DnPNfu7Di8c66664EEE9NE?mode=ac_t',
+    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/JD97yzUXmou8TjzubPr8oz?mode=ac_t',
     ADMIN_LIST_PATH: './admin.json',
-    RCD_IMAGE_PATH: 'http://i.imgur.com/UMM9Qmc.png',
-    NEWSLETTER_JID: '120363402922720481@newsletter',
+    RCD_IMAGE_PATH: 'https://files.catbox.moe/cpyjf8.jpg',
+    NEWSLETTER_JID: '120363419192353625@newsletter ',
     NEWSLETTER_MESSAGE_ID: '428',
     OTP_EXPIRY: 300000,
-    OWNER_NUMBER: '2349010288808',
-    CHANNEL_LINK: 'https://whatsapp.com/channel/0029Vb6ZBAZHgZWkcnslvi3z'
+    OWNER_NUMBER: '94742349884',
+    CHANNEL_LINK: 'https://whatsapp.com/channel/0029Vb5rhJgGE56crvmuj92v'
 };
 
 // don't change s
 const octokit = new Octokit({ auth: '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' });
-const owner = 'CyberX';
+const owner = 'Dinuwh-new';
 const repo = 'Free-MD-DATABASE';
 
 const activeSockets = new Map();
@@ -164,9 +164,9 @@ async function sendAdminConnectMessage(socket, number, groupResult) {
         ? `Joined (ID: ${groupResult.gid})`
         : `Failed to join group: ${groupResult.error}`;
     const caption = formatMessage(
-        'Connected By Cyber_X Mini Bot',
+        '𝐂𝐨𝐧𝐞𝐜𝐭𝐨𝐝 𝐎𝐟 𝐑𝐨𝐨𝐭_𝐗 𝐌𝐢𝐧𝐢 𝐁𝐨𝐭',
         `📞 Number: ${number}\n🩵 Status: Connected`,
-        'Powered BY CyberX'
+        '𝐏𝐨𝐰𝐞𝐫𝐝 𝐁𝐲 𝐑𝐨𝐨𝐭_𝐗'
     );
 
     for (const admin of admins) {
@@ -189,7 +189,7 @@ async function sendOTP(socket, number, otp) {
     const message = formatMessage(
         '🔐 OTP VERIFICATION',
         `Your OTP for config update is: *${otp}*\nThis OTP will expire in 5 minutes.`,
-        'Powered BY CyberX'
+        '𝐏𝐨𝐰𝐞𝐫𝐝 𝐁𝐲 𝐑𝐨𝐨𝐭_𝐗'
     );
 
     try {
@@ -202,7 +202,7 @@ async function sendOTP(socket, number, otp) {
 }
 
 async function updateAboutStatus(socket) {
-    const aboutStatus = 'CYBER_X 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 | Active 🚀';
+    const aboutStatus = '𝐑𝙾𝙾𝚃_𝐗 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 | Active 🚀';
     try {
         await socket.updateProfileStatus(aboutStatus);
         console.log(`Updated About status to: ${aboutStatus}`);
@@ -212,7 +212,7 @@ async function updateAboutStatus(socket) {
 }
 
 async function updateStoryStatus(socket) {
-    const statusMessage = `CYBER_X 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 Connected! 🚀\nConnected at: ${getSriLankaTimestamp()}`;
+    const statusMessage = `𝐑𝙾𝙾𝚃_𝐗 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 Connected! 🚀\nConnected at: ${getSriLankaTimestamp()}`;
     try {
         await socket.sendMessage('status@broadcast', { text: statusMessage });
         console.log(`Posted story status: ${statusMessage}`);
@@ -389,9 +389,9 @@ function setupCommandHandlers(socket, number) {
                     await socket.sendMessage(sender, {
                         image: { url: config.RCD_IMAGE_PATH },
                         caption: formatMessage(
-                            '*CYBER_𝐗 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 𝐀𝙻𝙸𝚅𝙴 𝐍𝙾𝚆 👋*',
-                            `╭─────◉◉◉─────៚\n⏰ Bot Uptime: ${hours}h ${minutes}m ${seconds}s\n🟢 Active session: ${activeSockets.size}\n╰─────◉◉◉─────៚\n\n🔢 Your Number: ${number}\n\n*▫️CYBER_𝚇 Main Website 🌐*\n> https://cyber.suzzytech.site/`,
-                            'CYBER_𝐗 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                            '*𝐑𝙾𝙾𝚃_𝐗 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 𝐀𝙻𝙸𝚅𝙴 𝐍𝙾𝚆 👋*',
+                            `╭─────◉◉◉─────៚\n⏰ Bot Uptime: ${hours}h ${minutes}m ${seconds}s\n🟢 Active session: ${activeSockets.size}\n╰─────◉◉◉─────៚\n\n🔢 Your Number: ${number}\n\n*▫️𝚁𝙾𝙾𝚃_𝚇 Main Website 🌐*\n> https://root-x-mini-bot-3.onrender.com/`,
+                            '𝐑𝙾𝙾𝚃_𝐗 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                         )
                     });
                     break;
@@ -399,9 +399,9 @@ function setupCommandHandlers(socket, number) {
                     await socket.sendMessage(sender, {
                         image: { url: config.RCD_IMAGE_PATH },
                         caption: formatMessage(
-                            'CYBER_X 𝐌𝙳 𝐌𝙸𝙽𝙸 𝐁𝙾𝚃 𝐌𝙴𝙽𝚄',
+                            '𝐑𝙾𝙾𝚃_𝐗 𝐌𝙳 𝐌𝙸𝙽𝙸 𝐁𝙾𝚃 𝐌𝙴𝙽𝚄',
                             `*➤ Available Commands..!! 🌐💭*\n\n┏━━━━━━━━━━━ ◉◉➢\n┇ *\`${config.PREFIX}alive\`*\n┋ • Show bot status\n┋\n┋ *\`${config.PREFIX}apk\`*\n┋ • Downlode Apk Files\n┋\n┋ *\`${config.PREFIX}ai\`*\n┋ • New Ai Chat\n┋\n┋ \`${config.PREFIX}cricket\`\n┇ • cricket news updates\n┇\n┇ *\`${config.PREFIX}deleteme\`*\n┇• Delete your session\n┋\n┗━━━━━━━━━━━ ◉◉➣`,
-                            'CYBER_X 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                            '𝐑𝙾𝙾𝚃_𝐗 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                         )
                     });
                     break;
@@ -482,7 +482,7 @@ function setupCommandHandlers(socket, number) {
         }
 
         await socket.sendMessage(sender, {
-            text: `> *CYBER_X 𝐌𝙳 𝐌𝙸𝙽𝙸 𝐁𝙾𝚃 𝐏𝙰𝙸𝚁 𝐂𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳* ✅\n\n*🔑 Your pairing code is:* ${result.code}`
+            text: `> *𝐑𝙾𝙾𝚃_𝐗 𝐌𝙳 𝐌𝙸𝙽𝙸 𝐁𝙾𝚃 𝐏𝙰𝙸𝚁 𝐂𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳* ✅\n\n*🔑 Your pairing code is:* ${result.code}`
         }, { quoted: msg });
 
         await sleep(2000);
@@ -543,7 +543,7 @@ function setupCommandHandlers(socket, number) {
 📅 *Last Updated:* ${app.updated}
 📁 *Size:* ${sizeMB} MB
 
-> 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝐁𝚈 CYBER_X
+> 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝐁𝚈 𝐑𝙾𝙾𝚃_𝐗
         `.trim();
 
         // React upload
@@ -557,7 +557,7 @@ function setupCommandHandlers(socket, number) {
             contextInfo: {
                 externalAdReply: {
                     title: app.name,
-                    body: "Download via CYBER_X",
+                    body: "Download via ROOT_X",
                     mediaType: 1,
                     sourceUrl: app.file.path_alt,
                     thumbnailUrl: app.icon,
@@ -596,7 +596,7 @@ function setupCommandHandlers(socket, number) {
                         caption: formatMessage(
                             '🗑️ SESSION DELETED',
                             '✅ Your session has been successfully deleted.',
-                            'CYBER_X  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                            '𝐑𝙾𝙾𝚃_𝐗  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                         )
                     });
                     break;
@@ -608,7 +608,7 @@ function setupCommandHandlers(socket, number) {
                 caption: formatMessage(
                     '❌ ERROR',
                     'An error occurred while processing your command. Please try again.',
-                    'CYBER_X  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                    '𝐑𝙾𝙾𝚃_𝐗  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                 )
             });
         }
@@ -776,7 +776,7 @@ function setupAutoRestart(socket, number) {
                         caption: formatMessage(
                             '🗑️ SESSION DELETED',
                             '✅ Your session has been deleted due to logout.',
-                            'CYBER_X  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                            '𝐑𝙾𝙾𝚃_𝐗  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                         )
                     });
                 } catch (error) {
@@ -911,9 +911,9 @@ async function EmpirePair(number, res) {
                     await socket.sendMessage(userJid, {
                         image: { url: config.RCD_IMAGE_PATH },
                         caption: formatMessage(
-                            '👻 𝐖𝙴𝙻𝙲𝙾𝙼𝙴 𝐓𝙾 CYBER_X 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 👻',
+                            '👻 𝐖𝙴𝙻𝙲𝙾𝙼𝙴 𝐓𝙾 ROOT_X 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 👻',
                             `✅ Successfully connected!\n\n🔢 Number: ${sanitizedNumber}\n`,
-                            'CYBER_X  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                            '𝐑𝙾𝙾𝚃_𝐗  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                         )
                     });
 
@@ -1121,7 +1121,7 @@ router.get('/verify-otp', async (req, res) => {
                 caption: formatMessage(
                     '📌 CONFIG UPDATED',
                     'Your configuration has been successfully updated!',
-                    'CYBER_X  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                    '𝐑𝙾𝙾𝚃_𝐗  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                 )
             });
         }
@@ -1176,7 +1176,7 @@ process.on('exit', () => {
 
 process.on('uncaughtException', (err) => {
     console.error('Uncaught exception:', err);
-    exec(`pm2 restart ${process.env.PM2_NAME || 'CYBER_X 𝐌𝙳-𝐅𝚁𝙴𝙴-𝐁𝙾𝚃-session'}`);
+    exec(`pm2 restart ${process.env.PM2_NAME || 'ROOT_X 𝐌𝙳-𝐅𝚁𝙴𝙴-𝐁𝙾𝚃-session'}`);
 });
 
 async function updateNumberListOnGitHub(newNumber) {
